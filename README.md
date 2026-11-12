@@ -76,6 +76,7 @@ The Developer Mode popup will appear:
 Toggle Developer Mode to ON.
 
 In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., 192.168.1.xxx). 
+
 **Windows**
 1. Press the Windows key, type `cmd`, and press Enter.
 2. Type `ipconfig` and press Enter.
