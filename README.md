@@ -1,104 +1,69 @@
-# ARY Plus TV - Samsung Tizen Web Application
+# ARY Plus for Samsung Tizen TV
 
-Custom-built high performance Tizen web application for Samsung Smart TVs, specifically optimized for the **Samsung Q60A QLED (Tizen 6.0+)**.
+An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remotes and designed to be easy for older family members to use.
 
----
-
-## Features
-- **Official ARY Plus Design**: Brand colors (`#6bfe12` neon green), high-contrast TV focus indicators, and 1080p full HD spatial layout.
-- **AVPlay Hardware Decoding**: High performance video rendering using Samsung's native `webapis.avplay` hardware underlay.
-- **Full Catalog & Live Streaming**: Browse TV dramas, shows, categories, and live TV channels with pagination and episode selection drawer.
-- **D-Pad Navigation**: Optimized for remote control navigation without requiring an air mouse or pointer.
+> **Only exclusive for Samsung users.**
+> Made by **punkidow x RaahimFaisal3120**
 
 ---
 
-## Installation via Apps2Samsung (Easiest Method - No Tizen Studio Required)
+## What's new
 
-[Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung) allows sideloading custom `.wgt` apps directly onto your Samsung TV from Windows, macOS, Linux, or even an Android phone.
+### 📺 Episodes: latest first
+- Drama episode lists now open on the **newest episode** (for example 29, 28, 27…) instead of episode 1.
+- The app loads all episodes of a drama once, sorts them newest-first, and pages them 20 at a time, so page 1 is always the latest.
 
-### Step 1: Enable Developer Mode on your Samsung TV
-1. Turn on your Samsung TV.
-2. Press the **Home** button on your remote and navigate to **Apps**.
-3. On your remote, press the numeric sequence **`1` `2` `3` `4` `5`** (use the remote number buttons or the on-screen `123` keypad).
-4. The **Developer Mode** popup will appear:
-   - Toggle **Developer Mode** to **ON**.
-   - In the **Host PC IP** field, enter your PC's or mobile phone's local network IP address (e.g., `192.168.1.xxx`).
-5. **Restart your TV**: Hold down the **Power** button on your Samsung remote for 5 seconds until the TV turns off and reboots with the Samsung logo.
+### 🧭 Easier page navigation
+- **Keep pressing Down** at the bottom of the list to continue to older episodes. Press **Up** at the top to go back to newer ones.
+- **CH+ / CH−** on the remote switch pages from anywhere in the list.
+- Larger **Newer / Older** buttons that show the episode range (for example "Episodes 29 – 10") instead of just "Page 1 of 2".
+- A short hint line explains how to reach older episodes.
 
-### Step 2: Download the ARY Plus TV Package
-Download the latest `AryPlusTV_signed.wgt` or `AryPlusTV.wgt` from the **[Releases](https://github.com/punkidow/AryPlusTV-Tizen/releases)** section of this repository.
+### ✨ Smooth animations
+- Posters and episode cards smoothly grow when focused, with a soft image zoom.
+- Grids scroll smoothly instead of jumping.
+- Cards rise in one after another when a page or section loads. The direction follows whether you go to older or newer episodes.
+- The episode screen fades and slides in and out. Posters and thumbnails fade in as they load.
+- Only transform and opacity are animated, to keep it light on TV hardware.
 
-### Step 3: Install using Apps2Samsung
-1. Download and run **[Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases)** on your PC or Android device (ensure your device is on the same Wi-Fi/local network as your TV).
-2. Select your TV from the discovered device list (or manually enter your TV's IP address).
-3. If prompted, sign in with a Samsung account to let Apps2Samsung generate the required developer certificate.
-4. Choose **Install Custom WGT** (or drag & drop the downloaded `AryPlusTV.wgt` / `AryPlusTV_signed.wgt` file into Apps2Samsung).
-5. Click **Install**. Once finished, ARY Plus will appear in your TV's home launcher bar and Apps drawer!
+### ⚙️ Player settings: quality and speed
+- Press **Down** while playing (or click **⚙ Settings**) to open the settings panel.
+- **Quality:** lists the resolutions found in the stream (for example 1080p, 720p, 360p) plus **Auto**. Changing quality continues from the same moment, and it falls back to Auto if a quality fails.
+- **Speed:** 1x, 2x and 4x on the TV's built-in player. The browser-style player supports 0.5x to 2x. Not available on live streams.
+- The player bar shows the active setting, for example `720p • 1x`.
+- Use ◀ ▶ to switch lists, ▲ ▼ to choose, OK to apply and Back to close.
 
----
+### 🎬 Animated-style startup
+- A cinematic splash with the ARY Plus logo, green glow, light streak and a zoom-through into the app.
+- A soft synthesized "ta-dum" sound. Set `BOOT_SOUND = false` in the boot script in `index.html` for a silent start.
+- Press any button to skip.
 
-## Alternative Installation: Developer CLI (Tizen Studio / SDB)
-
-For developers with Tizen CLI and SDB installed on their machine:
-
-### 1. Connect via SDB
-```powershell
-sdb connect <TV_IP_ADDRESS>:26101
-sdb devices
-```
-
-### 2. Build & Package
-```powershell
-# Rebuild single-page bundle
-node rebuild_index.js
-
-# Package WGT
-powershell -ExecutionPolicy Bypass -File build.ps1
-
-# Sign package (if using developer certificate profile)
-& tz pack -t wgt -s DevProfile -p .\profiles.xml -b .\AryPlusTV.wgt -o .\AryPlusTV_signed.wgt
-```
-
-### 3. Install & Launch
-```powershell
-# Install to TV
-& tz install -e <TV_IP_ADDRESS>:26101 -p .\AryPlusTV_signed.wgt
-
-# Launch app
-& sdb -s <TV_IP_ADDRESS>:26101 shell 0 was_execute tL8G1A0X4A.AryPlusTV
-```
+### 🏷️ Other
+- Package renamed to **ARY Plus** (`ARY_Plus.wgt`).
+- Credit line and "Only Exclusive for Samsung Users" note at the bottom of the main page.
 
 ---
 
-## Remote Control Key Map
+## Remote control
 
-| Remote Key | Function |
+| Key | Action |
 |---|---|
-| **Arrow Up / Down** | Switch between content rows & categories |
-| **Arrow Left / Right** | Browse items in row / Access sidebar drawer |
-| **Enter / OK** | Select item / Play selected live stream or episode |
-| **Return / Back** | Close video player / Close drawer / Exit app |
-| **Play / Pause** | Toggle video playback |
-| **Fast Forward / Rewind** | Seek +/- 10 seconds |
+| ▲ ▼ ◀ ▶ | Move around |
+| OK | Select / play / pause |
+| Down (in player) | Open settings |
+| ◀ ▶ (in player) | Seek |
+| CH+ / CH− (episode list) | Newer / older episodes |
+| Back | Close the current screen |
 
----
+## Notes and limitations
+- Speed options on the TV's hardware player are whole numbers only (1x, 2x, 4x). Fractional speeds such as 1.25x are only possible on the browser-style player.
+- Quality choices depend on how each stream is set up. If a stream has a separate audio track or an unreadable playlist, only **Auto** is shown.
+- Settings reset to Auto and 1x for each new video.
 
-## Project Structure
-```text
-AryPlusTV-Tizen/
-├── config.xml             # Tizen TV manifest, privileges, and icon definition
-├── index.html             # Bundled single-page app shell (1080p canvas)
-├── icon.png               # App launcher icon (117x117)
-├── build.ps1              # Packaging script for AryPlusTV.wgt
-├── package_wgt.js         # Zip bundler with POSIX forward slash normalization
-├── rebuild_index.js       # Inlines CSS and JS into single-file index.html
-├── profiles.xml           # Tizen developer signature profile
-├── css/
-│   └── style.css          # TV UI styling, high contrast focus states
-├── js/
-│   ├── app.js             # D-Pad navigation, API coordinator & UI state
-│   ├── player.js          # AVPlay hardware video engine
-│   ├── fallback_categories.js # Instant offline boot catalog
-│   └── fallback_data.js   # Offline catalog fallback
-└── icons/                 # Brand assets
-```
+## Install
+1. Open the project in **Tizen Studio**.
+2. Sign the package with your Samsung certificate. The `.wgt` provided here is **unsigned**.
+3. Install it on a Samsung TV in Developer Mode.
+
+## Credits
+**punkidow x RaahimFaisal3120**
