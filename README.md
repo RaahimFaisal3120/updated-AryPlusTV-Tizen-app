@@ -2,7 +2,6 @@
 
 An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remotes and designed to be easy for older family members to use.
 
-> **Only exclusive for Samsung users.**
 > Made by **punkidow x RaahimFaisal3120**
 
 ---
@@ -60,10 +59,18 @@ An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remote
 - Quality choices depend on how each stream is set up. If a stream has a separate audio track or an unreadable playlist, only **Auto** is shown.
 - Settings reset to Auto and 1x for each new video.
 
-## Install
-1. Open the project in **Tizen Studio**.
-2. Sign the package with your Samsung certificate. The `.wgt` provided here is **unsigned**.
-3. Install it on a Samsung TV in Developer Mode.
+Installation via Apps2Samsung (Easiest Method - No Tizen Studio Required)
+Apps2Samsung allows sideloading custom .wgt apps directly onto your Samsung TV from Windows, macOS, Linux, or even an Android phone.
+
+Step 1: Enable Developer Mode on your Samsung TV
+Turn on your Samsung TV.
+Press the Home button on your remote and navigate to Apps.
+Go down and open App Settings.
+On your remote, press the numeric sequence 1 2 3 4 5 (use the remote number buttons or the on-screen 123 keypad).
+The Developer Mode popup will appear:
+Toggle Developer Mode to ON.
+In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., 192.168.1.xxx).
+Restart your TV: Hold down the Power button on your Samsung remote for 5 seconds until the TV turns off and reboots with the Samsung logo.
 
 ## Credits
 **punkidow x RaahimFaisal3120**
