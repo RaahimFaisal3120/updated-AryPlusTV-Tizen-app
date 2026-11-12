@@ -64,18 +64,20 @@ An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remote
 
 ### Step 1: Enable Developer Mode on your Samsung TV
 
-Turn on your Samsung TV.
+1._ Turn on your Samsung TV.
 
-Press the Home button on your remote and navigate to Apps.
+2._ Press the Home button on your remote and navigate to Apps.
 
-Go down and open App Settings.
+3._ Go down and open App Settings.
 
-On your remote, press the numeric sequence 1 2 3 4 5 (use the remote number buttons or the on-screen 123 keypad).
+4._ On your remote, press the numeric sequence 1 2 3 4 5 (use the remote number buttons or the on-screen 123 keypad).
 
 The Developer Mode popup will appear:
 Toggle Developer Mode to ON.
 
-In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., 192.168.1.xxx). 
+In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., 192.168.1.xxx). You can choose your desired device below.
+
+----------------------------------------------------
 
 **Windows**
 1. Press the Windows key, type `cmd`, and press Enter.
@@ -92,16 +94,29 @@ In the Host PC IP field, enter your PC's or mobile phone's local network IP addr
 2. Tap your connected network.
 3. Read the **IP address** (it may be under **Advanced**).
 
-> Use the computer's IP for Tizen Studio installs. The computer(device u using) and the TV must be on the same network, and the address can change if the router restarts.
+----------------------------------------------------
 
-### Step 2: Turn on Developer Mode on the TV
-1. On the TV, open **Apps**.
-2. Using the remote, enter **1 2 3 4 5**.
-3. Switch **Developer mode** to **On**.
-4. In **Host PC IP**, enter the IP address from Step 1.
-5. Click **OK** and **restart the TV**.
+> Note: Use the computer's IP for Tizen Studio installs. The computer(device u using) and the TV must be on the same network, and the address can change if the router restarts.
 
-Restart your TV: Hold down the Power button on your Samsung remote for 5 seconds until the TV turns off and reboots with the Samsung logo.
+5._ Restart your TV: Hold down the Power button on your Samsung remote for 5 seconds until the TV turns off and reboots with the Samsung logo.
+
+## Step 2: Download the ARY Plus TV Package
+Download the ARY_Plus Updated Version .wgt from the Releases section of this repository (above).
+
+## Step 3: Install using Apps2Samsung
+
+1._ Download and run Apps2Samsung on your PC or Android device (ensure your device is on the same Wi-Fi/local network as your TV).
+
+2._ Select your TV from the discovered device list (or manually enter your TV's IP address).
+
+3._ If prompted, sign in with a Samsung account to let Apps2Samsung generate the required developer certificate.
+
+4._ Choose Install Custom WGT (or drag & drop the downloaded AryPlusTV.wgt / AryPlusTV_signed.wgt file into Apps2Samsung).
+
+5._ Click Install. Once finished, ARY Plus will appear in your TV's home launcher bar and Apps drawer!
+
+
+
 If this method doesn't work, then you can try punkidow version --> https://github.com/punkidow/AryPlusTV-Tizen
 ## Credits
 **punkidow x RaahimFaisal3120 x Samsung Pakistan**
