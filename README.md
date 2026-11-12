@@ -75,10 +75,9 @@ An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remote
 The Developer Mode popup will appear:
 Toggle Developer Mode to ON.
 
-In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., 192.168.1.xxx). You can choose your desired device below.
+In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., **192.168.1.xxx**) . You can find the IP address by choosing your desired device below.
 
 ----------------------------------------------------
-
 **Windows**
 1. Press the Windows key, type `cmd`, and press Enter.
 2. Type `ipconfig` and press Enter.
@@ -93,10 +92,9 @@ In the Host PC IP field, enter your PC's or mobile phone's local network IP addr
 1. Open **Settings → Wi-Fi** (or **Network & internet**).
 2. Tap your connected network.
 3. Read the **IP address** (it may be under **Advanced**).
-
 ----------------------------------------------------
 
-> Note: Use the computer's IP for Tizen Studio installs. The computer(device u using) and the TV must be on the same network, and the address can change if the router restarts.
+> Note: The computer(device u using) and the TV must be on the same network, and the address can change if the wifi router restarts.
 
 5._ Restart your TV: Hold down the Power button on your Samsung remote for 5 seconds until the TV turns off and reboots with the Samsung logo.
 
