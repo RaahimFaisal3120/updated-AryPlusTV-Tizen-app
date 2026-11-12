@@ -59,8 +59,8 @@ An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remote
 - Quality choices depend on how each stream is set up. If a stream has a separate audio track or an unreadable playlist, only **Auto** is shown.
 - Settings reset to Auto and 1x for each new video.
 
-Installation via Apps2Samsung (Easiest Method - No Tizen Studio Required)
-Apps2Samsung allows sideloading custom .wgt apps directly onto your Samsung TV from Windows, macOS, Linux, or even an Android phone.
+## Installation via Apps2Samsung (Easiest Method - No Tizen Studio Required)
+## Apps2Samsung allows sideloading custom .wgt apps directly onto your Samsung TV from Windows, macOS, Linux, or even an Android phone.
 
 Step 1: Enable Developer Mode on your Samsung TV
 Turn on your Samsung TV.
