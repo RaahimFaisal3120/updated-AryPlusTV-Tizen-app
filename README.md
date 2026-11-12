@@ -38,7 +38,7 @@ An unofficial Samsung Tizen TV app for the ARY Plus website, built for TV remote
 - Press any button to skip.
 
 ### 🏷️ Other
-- Package renamed to **ARY Plus** (`ARY_Plus.wgt`).
+- Package renamed to **ARY_Plus Updated Version .wgt**
 - Credit line and "Only Exclusive for Samsung Users" note at the bottom of the main page.
 
 ---
