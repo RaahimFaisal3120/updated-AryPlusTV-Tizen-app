@@ -71,6 +71,6 @@ The Developer Mode popup will appear:
 Toggle Developer Mode to ON.
 In the Host PC IP field, enter your PC's or mobile phone's local network IP address (e.g., 192.168.1.xxx).
 Restart your TV: Hold down the Power button on your Samsung remote for 5 seconds until the TV turns off and reboots with the Samsung logo.
-
+If this method doesn't work, then you can try punkidow version --> https://github.com/punkidow/AryPlusTV-Tizen
 ## Credits
-**punkidow x RaahimFaisal3120**
+**punkidow x RaahimFaisal3120 x Samsung Pakistan**
