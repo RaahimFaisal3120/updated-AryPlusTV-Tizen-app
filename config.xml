@@ -4,11 +4,25 @@
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
     <icon src="icon.png"/>
-    <name>Ary Plus TV</name>
+    <name>ARY Digital</name>
     <tizen:application id="tL8G1A0X4A.AryPlusTV" package="tL8G1A0X4A" required_version="2.3"/>
     <tizen:privilege name="http://tizen.org/privilege/internet"/>
     <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
     <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
     <tizen:profile name="tv"/>
+    <!-- Smart Hub Preview: tiles (Continue Watching, New Episodes, Dramas) above the app icon on the TV home bar -->
+    <tizen:metadata key="http://samsung.com/tv/metadata/use.preview" value="bg_service"/>
+    <tizen:app-control>
+        <tizen:src name="index.html" reload="disable"/>
+        <tizen:operation name="http://samsung.com/appcontrol/operation/eden_resume"/>
+    </tizen:app-control>
+    <tizen:service id="tL8G1A0X4A.preview" auto-restart="false">
+        <tizen:content src="service/service.js"/>
+        <tizen:name>preview</tizen:name>
+        <tizen:icon src="icon.png"/>
+        <tizen:description>Home screen preview</tizen:description>
+        <tizen:metadata key="meta-key" value="meta-value"/>
+        <tizen:category name="http://tizen.org/category/service"/>
+    </tizen:service>
     <tizen:setting screen-orientation="landscape" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
 </widget>
